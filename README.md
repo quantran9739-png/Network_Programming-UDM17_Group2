@@ -1,64 +1,59 @@
-
-#  Multiplayer Caro Game 
+#  Multiplayer Caro Game (Gomoku) 
 **Project Code:** UDM_17
-**Course:** Network Programming (Lập trình mạng)
+**Course:** Network Programming
 
 ---
 
-##  Team Members & Roles (Thông tin nhóm)
-Với đội hình 6 thành viên, nhóm áp dụng mô hình phát triển phần mềm cơ bản để tối ưu hiệu suất:
+## 👥 Team Members & Roles
+To ensure efficient collaboration and maximize our 6-member team's productivity, we have adopted a structured software development lifecycle approach:
 
-1. **Quan** - *Product Owner / Project Manager:* Quản lý tiến độ (Timeline), viết Proposal, chốt Requirement và điều phối task.
-2. **[Tên TV 2]** - *System Architect / Backend Dev:* Thiết kế kiến trúc mạng (Client-Server), xử lý logic truyền tải dữ liệu (Socket/TCP).
-3. **[Tên TV 3]** - *Game Logic Developer:* Xử lý thuật toán bàn cờ (kiểm tra thắng/thua ngang, dọc, chéo).
-4. **[Tên TV 4]** - *UI/UX Designer & Frontend Dev:* Lên bản vẽ Figma và code giao diện người dùng (GUI), đồng hồ đếm ngược.
-5. **[Tên TV 5]** - *QA Engineer (Tester):* Chịu trách nhiệm viết script chạy Stress Test, Performance Test theo yêu cầu của giảng viên.
-6. **[Tên TV 6]** - *Technical Writer:* Tổng hợp tài liệu, chụp ảnh minh chứng, làm slide PPTX và quay video Demo cuối kỳ.
-
----
-
-## 📁 Repository Structure (Cấu trúc thư mục)
-Theo đúng tiêu chuẩn đánh giá của giảng viên / *Following the lecturer's strict requirements*:
-
-- 📂 `Code/`: Contains all source code (Server, Client, GUI).
-- 📂 `DOCX/`: Contains project proposals, business requirements, and system design documents.
-- 📂 `Extra/`: Contains UI mockup images (Figma), proof of Stress/Performance tests, and demo videos.
-- 📂 `PPTX/`: Contains presentation slides for the final report.
+1. **Quan** - *Product Owner / Project Manager:* Manages project timeline, drafts proposals, defines business requirements, and delegates tasks.
+2. **[Member 2 Name]** - *System Architect / Backend Developer:* Designs the network architecture (Client-Server model) and handles core TCP/Socket communication.
+3. **[Member 3 Name]** - *Game Logic Developer:* Implements the Gomoku algorithms (validating coordinates, checking 5-in-a-row win/loss conditions).
+4. **[Member 4 Name]** - *UI/UX Designer & Frontend Developer:* Creates UI mockups via Figma and develops the graphical user interface (GUI) and countdown timer.
+5. **[Member 5 Name]** - *QA Engineer:* Develops test scripts to conduct Stress Testing and Performance Testing as per the project requirements.
+6. **[Member 6 Name]** - *Technical Writer:* Compiles documentation, gathers testing proofs, designs presentation slides, and records the final demo video.
 
 ---
 
-##  Project Scope & Requirements (Phạm vi dự án)
+## 📁 Repository Structure
+Following the strict guidelines provided by the lecturer:
 
-### Functional Requirements (Yêu cầu chức năng)
-- **EN:** Client connects to Server via IP/Port. Automatic matchmaking for 2 players.
-- **VI:** Client kết nối Server qua IP/Port. Tự động ghép bàn cho 2 người chơi.
-- **EN:** Turn-based gameplay (X/O) with win/loss detection (5 in a row).
-- **VI:** Chơi luân phiên (X/O), nhận diện thắng thua (5 quân liên tiếp).
-- **EN:** Countdown timer for each turn. Auto-loss if time runs out.
-- **VI:** Đồng hồ đếm ngược mỗi lượt. Hết giờ tự động xử thua.
-
-### Non-Functional Requirements (Yêu cầu phi chức năng)
-- **EN:** Must be a Windows GUI Application (No Web App).
-- **VI:** Ứng dụng Desktop có giao diện đồ họa chạy trên Windows.
-- **EN:** Must pass Stress Test and Performance Test with visual proof.
-- **VI:** Hệ thống chịu tải tốt, cung cấp bằng chứng (hình ảnh/video) cho Stress Test.
+- 📂 `Code/`: Contains all source code (Server, Client, and GUI scripts).
+- 📂 `DOCX/`: Contains project proposals, business requirement documents, and system design specifications.
+- 📂 `Extra/`: Contains UI mockup images, visual proofs of Stress/Performance tests, and demo videos.
+- 📂 `PPTX/`: Contains presentation slides for the final evaluation.
 
 ---
 
-##  Technology Stack (Công nghệ sử dụng)
-- **Programming Language:** Python
-- **Network Protocol:** TCP/IP Socket
+##  Project Scope & Requirements
+
+### Functional Requirements (FR)
+- **Matchmaking:** Clients connect to the Server via IP and Port. The Server automatically pairs two connected clients into a game session.
+- **Game Mechanics:** Turn-based Gomoku gameplay (X vs. O). The system automatically detects win/loss conditions (5 consecutive pieces horizontally, vertically, or diagonally).
+- **Time Constraint:** A strict countdown timer (e.g., 15 seconds) is enforced for each turn. If a player fails to make a move within the time limit, they automatically lose the match.
+
+### Non-Functional Requirements (NFR)
+- **Platform:** The application must be a standalone GUI application running on Windows OS (No Web Applications allowed).
+- **Performance:** The Server must be highly concurrent and capable of handling multiple simultaneous data transmissions without crashing.
+- **Proof of Testing:** Comprehensive Stress and Performance tests must be conducted, with solid visual evidence provided in the repository.
+
+---
+
+##  Technology Stack
+- **Programming Language:** C#
+- **Network Protocol:** TCP/IP (Socket Programming)
 - **GUI Framework:** Tkinter / PyQt
-- **Design Tool:** Figma (for UI Mockups)
+- **Design & Prototyping:** Figma
 
 ---
 
-##  Project Progress (Tiến độ dự án)
-*Checklist này sẽ được cập nhật hàng tuần (EOW) để tracking tiến độ / This checklist is updated weekly to ensure continuous progress.*
+##  Project Progress & Milestones
+*This checklist is updated at the End Of Week (EOW) to track continuous progress and prevent project failure due to inactivity.*
 
-- [x] **Week 1:** Initialize GitHub structure, assign roles, draft ReadMe.
-- [ ] **Week 2:** Finalize Proposal (`DOCX`), design UI Mockup (`Extra`), define network data structure.
-- [ ] **Week 3:** Implement Core Socket Server/Client and basic UI (`Code`).
-- [ ] **Week 4:** Integrate Game Logic and Countdown Timer.
-- [ ] **Week 5:** Conduct Stress Tests (`Extra`), bug fixing.
-- [ ] **Week 6:** Finalize Presentation (`PPTX`) and record Demo Video.
+- [x] **Week 1:** Initialize repository structure, assign team roles, and establish the README documentation.
+- [ ] **Week 2:** Finalize Project Proposal (`DOCX`), design initial UI Mockups (`Extra`), and define the data payload structure.
+- [ ] **Week 3:** Implement core Socket Server/Client communication and basic GUI layout (`Code`).
+- [ ] **Week 4:** Integrate game algorithms and the countdown timer logic.
+- [ ] **Week 5:** Execute automated Stress Tests, document the results (`Extra`), and perform bug fixing.
+- [ ] **Week 6:** Finalize presentation slides (`PPTX`), record the final Demo Video, and prepare for the defense.
