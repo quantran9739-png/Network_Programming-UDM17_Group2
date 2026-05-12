@@ -44,7 +44,6 @@ Following the strict guidelines provided by the lecturer:
 - **Programming Language:** C#
 - **Network Protocol:** TCP/IP (Socket Programming)
 - **GUI Framework:** Tkinter / PyQt
-- **Design & Prototyping:** Figma
 
 ---
 
